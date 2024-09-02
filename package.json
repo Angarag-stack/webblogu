@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "moment": "^2.30.1",
     "next": "14.2.7",
     "react": "^18",
     "react-dom": "^18",
     "swr": "^2.2.5"
   },
   "devDependencies": {
+    "daisyui": "^4.12.10",
     "eslint": "^8",
     "eslint-config-next": "14.2.7",
     "postcss": "^8",
