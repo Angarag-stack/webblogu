@@ -24,17 +24,23 @@ const Home = () => {
   const allblogs = blogs?.slice(0, 8);
   const slider = blogs?.slice(0, 1);
 
-  console.log(slider);
   return (
     <div className="gap-[15px]">
       <div className="text-center xl:max-w-[1024px] xl:m-auto flex flex-col gap-[100px]  ">
         <Heads />
-        <div>
-          <Slide
-            text={blogs[0].title}
-            img={blogs[0].cover_image}
-            tags={blogs[0].tags}
-          />
+        <div className="carousel w-full">
+          {blogs.map((blog) => {
+            console.log(blog[index]);
+            return (
+              <Slide
+                index={blog.id}
+                // text={blog.title}
+                img={blog.cover_image}
+                // tags={blog.tags}
+                href={blog.index}
+              />
+            );
+          })}{" "}
         </div>
         <div className=" flex flex-col gap-[30px]">
           <Trending />
