@@ -17,7 +17,9 @@ const Text = (props) => {
   const { text } = props;
   return (
     <div>
-      <p className="w-[280px]">{text}</p>
+      <p className="w-[280px] font-extralight text-base text-gray-700">
+        {text}
+      </p>
     </div>
   );
 };
@@ -31,15 +33,15 @@ const Link = (props) => {
 };
 export const Footer = () => {
   return (
-    <div className="bg-gray-100 w-[1024px] m-auto">
+    <div className="bg-gray-100 py-[64px] px-[352px] ">
       <div className="flex justify-between">
         <div className="text-start">
-          <p className="text-lg font-medium">About</p>
+          <p className="text-lg font-medium ">About</p>
           {abouts.map((about, index) => {
             return <Text key={index} text={about} />;
           })}
         </div>
-        <div className="gap-2">
+        <div className="gap-2 ">
           {header.map((element, index) => {
             return (
               <div
@@ -58,7 +60,7 @@ export const Footer = () => {
           <In />
         </div>
       </div>
-      <div className="flex justify-between py-8">
+      <div className="flex justify-between py-8 mt-5 border-t-2">
         <div className="flex gap-2">
           <Blogo></Blogo>
           <div className="">
@@ -66,10 +68,12 @@ export const Footer = () => {
               <p className="font-semibold">Meta</p>
               <p>Blog</p>
             </div>
-            <p>© All Rights Reserved.</p>
+            <p className="font-extralight text-base text-gray-700 ">
+              © All Rights Reserved.
+            </p>
           </div>
         </div>
-        <div className="flex gap-4">
+        <div className="flex gap-4 font-extralight text-base text-gray-700">
           {link.map((element) => {
             return <Link text={element}></Link>;
           })}
