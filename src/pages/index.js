@@ -46,7 +46,7 @@ const Home = () => {
                     img={blog.cover_image}
                     tags={blog.tag_list[0]}
                     index={index}
-                  />
+                  />sss
                 </div>
               );
             })}{" "}
