@@ -1,14 +1,14 @@
 import Home from "@/pages";
-import { useState } from "react";
 import { BlogCard } from "./BlogCard";
 import useSWR from "swr";
+import React, { useState } from "react";
 
 const url = "https://dev.to/api/articles";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
-const More = () => {
+export const More = () => {
   const { data: blogs, error, isLoading } = useSWR(url, fetcher);
-  // const { load, setLoad } = useState(0);
+  const [load, setLoad] = useState(9);
 
   if (error) {
     return <p>...oh error</p>;
@@ -17,17 +17,17 @@ const More = () => {
   if (isLoading) {
     return <p>...loading</p>;
   }
-  const threeblog = blogs?.slice(0, 3);
-  const loadmore = () => {
-    setLoad((prev) => {
-      prev + 1;
-    });
+  const posts = blogs.slice(0, load);
+
+  const Loadmore = () => {
+    setLoad((p) => p + 9);
   };
+  console.log(load);
   return (
     <div>
       {" "}
-      <div className="grid grid-cols-3 gap-5 text-start">
-        {threeblog.map((blog) => {
+      <div className=" md:grid md:grid-cols-2 lg:grid lg:grid-cols-3 gap-8  ">
+        {posts.map((blog) => {
           return (
             <BlogCard
               key={blog.id}
@@ -40,17 +40,13 @@ const More = () => {
           );
         })}
       </div>{" "}
+      <button
+        onClick={Loadmore}
+        className="border py-3 px-5 rounded-[6px] text-gray-500 w-[123px] mt-7"
+      >
+        {" "}
+        Load More
+      </button>
     </div>
-  );
-};
-export const Load = () => {
-  return (
-    <button
-      onClick={More}
-      className="border py-3 px-5 rounded-[6px] text-gray-500 w-[123px] "
-    >
-      {" "}
-      Load More
-    </button>
   );
 };

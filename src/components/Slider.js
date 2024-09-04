@@ -54,7 +54,7 @@ export const Slide = () => {
     if (slide > 0) setSlide((prev) => prev - 1);
   };
   return (
-    <div>
+    <div className="hidden lg:block">
       {blogs.map((blog, index) => {
         if (index === slide) {
           return (
@@ -67,7 +67,7 @@ export const Slide = () => {
           );
         }
       })}
-      <div className="flex flex-row  justify-end gap-2">
+      <div className="flex flex-row  justify-end mt-2 gap-2">
         <button onClick={Prevslide}>
           <Back></Back>
         </button>

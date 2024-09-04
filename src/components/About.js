@@ -17,7 +17,7 @@ const Text = (props) => {
   const { text } = props;
   return (
     <div>
-      <p className="w-[280px] font-extralight text-base text-gray-700">
+      <p className="lg:w-[280px] font-extralight text-base text-gray-700">
         {text}
       </p>
     </div>
@@ -33,9 +33,9 @@ const Link = (props) => {
 };
 export const Footer = () => {
   return (
-    <div className="bg-gray-100 py-[64px] px-[352px] ">
-      <div className="flex justify-between">
-        <div className="text-start">
+    <div className="bg-gray-100 p-10 lg:py-[64px] lg:px-[352px] ">
+      <div className=" text-center lg:flex justify-between">
+        <div className="lg:text-start">
           <p className="text-lg font-medium ">About</p>
           {abouts.map((about, index) => {
             return <Text key={index} text={about} />;
@@ -53,7 +53,7 @@ export const Footer = () => {
             );
           })}
         </div>
-        <div className="flex gap-4">
+        <div className=" flex justify-center  gap-4 lg:flex lg:gap-4">
           <Ig />
           <Fb />
           <Twitter />
