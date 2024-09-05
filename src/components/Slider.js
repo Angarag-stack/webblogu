@@ -8,31 +8,33 @@ const url = "https://dev.to/api/articles";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
 const Screen = (props) => {
-  const { img, text, tags, date } = props;
+  const { img, text, tags, date, id } = props;
   return (
-    <div className="relative ">
-      {" "}
-      <div
-        style={{
-          height: 600,
-          backgroundImage: `url(${img})`,
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          borderRadius: "12px",
-        }}
-      />
-      <div className="p-10 bg-white text-start w-[598px] flex flex-col gap-7 absolute bottom-2 left-2 rounded-md ">
-        <div className=" border bg-blue-700 text-white py-1 px-[10px] font-normal text-sm  rounded-lg w-[97px]">
-          {tags}
-        </div>
-        <div className="text-2xl font-medium ">{text}</div>
+    <Link href={`blog/${id}`}>
+      <div className="relative ">
+        {" "}
+        <div
+          style={{
+            height: 600,
+            backgroundImage: `url(${img})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+            borderRadius: "12px",
+          }}
+        />
+        <div className="p-10 bg-white text-start w-[598px] flex flex-col gap-7 absolute bottom-2 left-2 rounded-md ">
+          <div className=" border bg-blue-700 text-white py-1 px-[10px] font-normal text-sm  rounded-lg w-[97px]">
+            {tags}
+          </div>
+          <div className="text-2xl font-medium ">{text}</div>
 
-        <div className="font-normal text-gray-400">
-          {moment(date).format("ll")}
+          <div className="font-normal text-gray-400">
+            {moment(date).format("ll")}
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
@@ -59,6 +61,7 @@ export const Slide = () => {
         if (index === slide) {
           return (
             <Screen
+              id={blog.id}
               key={blog.id}
               img={blog.cover_image}
               text={blog.title}

@@ -1,4 +1,3 @@
-import Home from "@/pages";
 import { BlogCard } from "./BlogCard";
 import useSWR from "swr";
 import React, { useState } from "react";
@@ -30,6 +29,7 @@ export const More = () => {
         {posts.map((blog) => {
           return (
             <BlogCard
+              id={blog.id}
               key={blog.id}
               title={blog.title}
               cover_image={blog.cover_image}

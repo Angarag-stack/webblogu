@@ -4,9 +4,11 @@ import { Blog } from "./icons/Blogtext";
 import { Meta } from "./icons/Meta";
 import { Search } from "./icons/Search";
 import { Kebab } from "@/components/icons/kebab";
+import Link from "next/link";
 
 const Header = ["Home", "Blog", "Contact"];
-export const Heads = () => {
+export const Heads = (props) => {
+  const { id } = props;
   return (
     <div className="flex flex-row justify-between py-[32px]">
       <div className=" flex justify-between items-center gap-2">
@@ -18,8 +20,13 @@ export const Heads = () => {
       </div>
       <Kebab></Kebab>
       <div className="hidden lg:flex lg:flex-row lg:justify-between gap-[21px] items-center  ">
-        <div className="flex flex-row  justify-evenly w-[400px]">
-          {Header.map((element, index) => {
+        <div className="flex flex-row  justify-evenly w-[400px] font-extralight text-base text-gray-700">
+          <div>Home</div>
+          <div>Blog</div>
+          <Link href={`Contact`}>
+            <div onClick={""}>Contant</div>
+          </Link>
+          {/* {Header.map((element, index) => {
             return (
               <div
                 className="font-extralight text-base text-gray-700"
@@ -28,7 +35,7 @@ export const Heads = () => {
                 {element}
               </div>
             );
-          })}
+          })} */}
         </div>
         <div className="flex items-center  bg-gray-100 rounded">
           <input

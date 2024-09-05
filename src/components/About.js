@@ -74,8 +74,8 @@ export const Footer = () => {
           </div>
         </div>
         <div className="flex gap-4 font-extralight text-base text-gray-700">
-          {link.map((element) => {
-            return <Link text={element}></Link>;
+          {link.map((element, index) => {
+            return <Link key={index} text={element}></Link>;
           })}
         </div>
       </div>

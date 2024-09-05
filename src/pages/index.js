@@ -1,13 +1,14 @@
 import { Heads } from "@/components/Head";
 import { BlogCard } from "../components/BlogCard";
 import useSWR from "swr";
-// import { Load } from "@/components/Loadmore";
 import { Menu } from "@/components/Blogmenu";
 import { TrendingBlogCards, Trending } from "@/components/Trend";
 import { Footer } from "@/components/About";
 import { Slide } from "@/components/Slider";
 import { useState } from "react";
 import { More } from "@/components/Loadmore";
+import { Loadmore } from "@/components/indexturhsiw";
+import { Contact } from "@/components/Contact";
 
 const url = "https://dev.to/api/articles";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -15,15 +16,19 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 const Home = () => {
   const { data: blogs, error, isLoading } = useSWR(url, fetcher);
   const { post, setPost } = useState(9);
-
   if (error) {
     return <p>...oh error</p>;
   }
-
   if (isLoading) {
-    return <p>...loading</p>;
+    return (
+      <div>
+        <span className="loading loading-ball loading-xs"></span>
+        <span className="loading loading-ball loading-sm"></span>
+        <span className="loading loading-ball loading-md"></span>
+        <span className="loading loading-ball loading-lg"></span>
+      </div>
+    );
   }
-
   const trendingBlogs = blogs?.slice(0, 4);
   const allblogs = () => {
     setPost((prev) => prev + 9);
@@ -65,8 +70,9 @@ const Home = () => {
           <div className="carousel carousel-center rounded-box gap-4">
             {blogs.map((blog) => {
               return (
-                <div className="carousel-item ">
+                <div className="carousel-item " key={blog.id}>
                   <TrendingBlogCards
+                    id={blog.id}
                     key={blog.id}
                     img={blog.cover_image}
                     text={blog.title}
@@ -83,6 +89,7 @@ const Home = () => {
         </div>
       </div>
       <Footer />
+      <Contact />
     </div>
   );
 };
