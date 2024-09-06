@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const TrendingBlogCards = (props) => {
   const { text, img, tag, id } = props;
-  console.log(img);
+
   return (
     <Link href={`blog/${id}`}>
       <div className="card bg-base-100 image-full  shadow-lg carousel-item ">

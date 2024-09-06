@@ -19,7 +19,6 @@ export const Menu = () => {
     setName(tags.length);
   };
 
-  console.log(name);
   return (
     <div className="flex flex-col gap-8">
       <div className="text-start text-2xl font-semibold ">All blog post</div>

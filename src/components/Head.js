@@ -10,23 +10,24 @@ const Header = ["Home", "Blog", "Contact"];
 export const Heads = (props) => {
   const { id } = props;
   return (
-    <div className="flex flex-row justify-between py-[32px]">
-      <div className=" flex justify-between items-center gap-2">
-        <Blogo></Blogo>
-        <div className="flex items-center gap-1">
-          <Meta></Meta>
-          <Blog></Blog>
+    <div className=" text-center px-10 xl:max-w-[1024px] xl:m-auto   ">
+      <div className="flex flex-row justify-between pt-[32px] pb-[20px] lg:pb-[100px]">
+        <div className=" flex justify-between items-center gap-2">
+          <Blogo></Blogo>
+          <div className="flex items-center gap-1">
+            <Meta></Meta>
+            <Blog></Blog>
+          </div>
         </div>
-      </div>
-      <Kebab></Kebab>
-      <div className="hidden lg:flex lg:flex-row lg:justify-between gap-[21px] items-center  ">
-        <div className="flex flex-row  justify-evenly w-[400px] font-extralight text-base text-gray-700">
-          <div>Home</div>
-          <div>Blog</div>
-          <Link href={`Contact`}>
-            <div onClick={""}>Contant</div>
-          </Link>
-          {/* {Header.map((element, index) => {
+        <Kebab></Kebab>
+        <div className="hidden lg:flex lg:flex-row lg:justify-between gap-[21px] items-center  ">
+          <div className="flex flex-row  justify-evenly w-[400px] font-extralight text-base text-gray-700">
+            <div>Home</div>
+            <div>Blog</div>
+            <Link href={`Contact`}>
+              <div onClick={""}>Contact</div>
+            </Link>
+            {/* {Header.map((element, index) => {
             return (
               <div
                 className="font-extralight text-base text-gray-700"
@@ -36,17 +37,16 @@ export const Heads = (props) => {
               </div>
             );
           })} */}
-        </div>
-        <div className="flex items-center  bg-gray-100 rounded">
-          <input
-            className=" bg-gray-100 rounded-md h-9 font-extralight text-base"
-            placeholder="   search"
-          >
-            {/* <Search></Search> */}
-          </input>
-          <Search></Search>
-        </div>
-      </div>{" "}
+          </div>
+          <div className="flex items-center  bg-gray-100 rounded">
+            <input
+              className=" bg-gray-100 rounded-md h-9 font-extralight text-base"
+              placeholder="   search"
+            ></input>
+            <Search></Search>
+          </div>
+        </div>{" "}
+      </div>
     </div>
   );
 };

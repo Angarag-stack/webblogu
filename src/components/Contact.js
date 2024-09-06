@@ -1,6 +1,3 @@
-import { Footer } from "./About";
-import { Heads } from "./Head";
-
 const addCon = [
   { name: "Address", text: "1328 Oak Ridge Drive, Saint Louis, Missouri" },
   { name: "Contact", text: "313-332-8662uri", gmail: "info@email.com" },
@@ -20,7 +17,6 @@ export const Contact = () => {
   return (
     <div className="flex flex-col gap-20">
       <div className="px-10 xl:max-w-[1024px] xl:m-auto flex flex-col gap-[20px]  ">
-        <Heads></Heads>
         <div className="lg:p-10">
           <div className="flex flex-col gap-[20px] p-9">
             <h1 className="text-2xl font-semibold">Contact us</h1>
@@ -67,7 +63,6 @@ export const Contact = () => {
           </div>
         </div>
       </div>{" "}
-      <Footer></Footer>
     </div>
   );
 };

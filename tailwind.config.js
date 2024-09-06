@@ -14,7 +14,7 @@ module.exports = {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("@tailwindcss/typography")],
   screens: {
     sm: "640px",
     // => @media (min-width: 640px) { ... }

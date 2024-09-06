@@ -38,7 +38,6 @@ const Home = () => {
   return (
     <div className="flex flex-col gap-[100px] ">
       <div className="text-center px-10 xl:max-w-[1024px] xl:m-auto flex flex-col gap-[20px] lg:gap-[100px]  ">
-        <Heads />
         <div className="">
           <Slide></Slide>
           {/* <div className="carousel w-full">
@@ -88,7 +87,6 @@ const Home = () => {
           <More></More>
         </div>
       </div>
-      <Footer />
       <Contact />
     </div>
   );

@@ -21,7 +21,7 @@ export const More = () => {
   const Loadmore = () => {
     setLoad((p) => p + 9);
   };
-  console.log(load);
+
   return (
     <div>
       {" "}
