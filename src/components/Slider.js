@@ -2,8 +2,8 @@ import moment from "moment";
 import useSWR from "swr";
 import { Next } from "./icons/next";
 import { useState } from "react";
-import useSWR from "swr";
-
+import { Back } from "./icons/back";
+import Link from "next/link";
 const url = "https://dev.to/api/articles";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
 
