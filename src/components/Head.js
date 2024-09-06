@@ -24,9 +24,7 @@ export const Heads = (props) => {
           <div className="flex flex-row  justify-evenly w-[400px] font-extralight text-base text-gray-700">
             <div>Home</div>
             <div>Blog</div>
-            <Link href={`Contact`}>
-              <div onClick={""}>Contact</div>
-            </Link>
+            <Link href="/Contact">Contact</Link>
             {/* {Header.map((element, index) => {
             return (
               <div

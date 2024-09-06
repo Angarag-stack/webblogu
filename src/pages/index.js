@@ -8,7 +8,6 @@ import { Slide } from "@/components/Slider";
 import { useState } from "react";
 import { More } from "@/components/Loadmore";
 import { Loadmore } from "@/components/indexturhsiw";
-import { Contact } from "@/components/Contact";
 
 const url = "https://dev.to/api/articles";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());
@@ -87,7 +86,6 @@ const Home = () => {
           <More></More>
         </div>
       </div>
-      <Contact />
     </div>
   );
 };
