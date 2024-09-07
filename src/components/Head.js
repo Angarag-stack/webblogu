@@ -22,8 +22,8 @@ export const Heads = (props) => {
         <Kebab></Kebab>
         <div className="hidden lg:flex lg:flex-row lg:justify-between gap-[21px] items-center  ">
           <div className="flex flex-row  justify-evenly w-[400px] font-extralight text-base text-gray-700">
-            <div>Home</div>
-            <div>Blog</div>
+            <Link href="/BlogCard">Home</Link>
+            <Link href={`/blog${id}`}>Blog</Link>
             <Link href="/Contact">Contact</Link>
             {/* {Header.map((element, index) => {
             return (

@@ -7,7 +7,6 @@ import { Footer } from "@/components/About";
 import { Slide } from "@/components/Slider";
 import { useState } from "react";
 import { More } from "@/components/Loadmore";
-import { Loadmore } from "@/components/indexturhsiw";
 
 const url = "https://dev.to/api/articles";
 const fetcher = (...args) => fetch(...args).then((res) => res.json());

@@ -20,7 +20,7 @@ const DetailNews = () => {
   if (isLoading) {
     return <span className="loading loading-spinner text-primary"></span>;
   }
-  console.log(blogs);
+
   const bodyMarkdown = blogs?.body_markdown;
 
   return (

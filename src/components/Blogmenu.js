@@ -7,7 +7,7 @@ const fetcher = (...args) => fetch(...args).then((res) => res.json());
 export const Menu = () => {
   const { data: tags, error, isLoading } = useSWR(url, fetcher);
   const [name, setName] = useState(5);
-
+  const [tag, setTag] = useState("");
   if (error) {
     return <p>...oh error</p>;
   }
@@ -18,7 +18,19 @@ export const Menu = () => {
   const Showname = () => {
     setName(tags.length);
   };
-
+  // const Tagname = tags[0].name;
+  // console.log(Tagname);
+  const selectTag = () => {
+    console.log(name);
+  };
+  const Tags = (props) => {
+    const { tag_list } = props;
+    return (
+      <select>
+        <option onChange={selectTag}>{tag_list}</option>
+      </select>
+    );
+  };
   return (
     <div className="flex flex-col gap-8">
       <div className="text-start text-2xl font-semibold ">All blog post</div>
@@ -35,8 +47,4 @@ export const Menu = () => {
       </div>
     </div>
   );
-};
-const Tags = (props) => {
-  const { tag_list } = props;
-  return <div>{tag_list}</div>;
 };
