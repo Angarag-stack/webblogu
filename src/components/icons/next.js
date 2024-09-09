@@ -12,7 +12,7 @@ export const Next = () => {
         d="M16 12L23.5 19.5L16 27"
         stroke="black"
         stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

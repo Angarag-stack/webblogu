@@ -81,7 +81,7 @@ const Home = () => {
           </div>
         </div>
         <div className="flex flex-col gap-8 ">
-          <Menu />
+          {/* <Menu /> */}
           <More></More>
         </div>
       </div>

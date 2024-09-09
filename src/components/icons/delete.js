@@ -17,7 +17,7 @@ export const Delete = () => {
             className="dark:stroke-slate-50"
             stroke-width="2"
             stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           />
           <path
             d="M6 6L18 18"
@@ -25,7 +25,7 @@ export const Delete = () => {
             className="dark:stroke-slate-50"
             stroke-width="2"
             stroke-linecap="round"
-            stroke-linejoin="round"
+            strokeLinejoin="round"
           />
         </svg>
       </label>{" "}

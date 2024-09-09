@@ -10,7 +10,7 @@ export const BlogCard = (props) => {
         </div>
         <div className="flex flex-col  ">
           <div className="flex flex-col gap-3">
-            <div className="font-normal text-sm text-blue-600 text-start px-[10px] py-[5px] rounded-lg bg-gray-100 ">
+            <div className="font-normal text-sm text-blue-600  px-[10px] py-[5px] rounded-lg bg-gray-100  ">
               {tags}
             </div>
             <h1 className="text-xl font-semibold">{title}</h1>{" "}
