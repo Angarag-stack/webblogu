@@ -24,9 +24,20 @@ const DetailNews = () => {
   const bodyMarkdown = blogs?.body_markdown;
 
   return (
-    <div className=" xl:max-w-[1024px] xl:m-auto mx-auto w-[655px] flex flex-col gap-10 justify-center ">
-      <h1 className="text-2xl font-medium">{blogs.title}</h1>
-      <img src={blogs.user.profile_image} className="w-[20px] h-[20px]" />
+    <div className=" xl:max-w-[1024px] xl:m-auto mx-auto w-[655px] flex flex-col gap-10 justify-center pb-10 ">
+      <h1 className="text-2xl font-medium">{blogs.title}</h1>{" "}
+      <div className="flex gap-6">
+        <div className="flex gap-3">
+          <img
+            src={blogs.user.profile_image}
+            className="w-[28px] h-[28px] rounded-xl"
+          />
+          <p className="text-gray-600">{blogs.user.name}</p>{" "}
+        </div>
+        <div className="text-gray-600">
+          {moment(blogs.created_at).format("ll")}
+        </div>{" "}
+      </div>
       <div className="prose ">
         <Markdown>{bodyMarkdown}</Markdown>
       </div>

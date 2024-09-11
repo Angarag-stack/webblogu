@@ -14,17 +14,17 @@ export const Delete = () => {
           <path
             d="M18 6L6 18"
             stroke="#4B5563"
-            className="dark:stroke-slate-50"
-            stroke-width="2"
-            stroke-linecap="round"
+            className="dark:strokeSlate-50"
+            strokeWidth="2"
+            strokeLinecap="round"
             strokeLinejoin="round"
           />
           <path
             d="M6 6L18 18"
             stroke="#4B5563"
-            className="dark:stroke-slate-50"
-            stroke-width="2"
-            stroke-linecap="round"
+            className="dark:strokeSlate-50"
+            strokeWidth="2"
+            strokeLinecap="round"
             strokeLinejoin="round"
           />
         </svg>

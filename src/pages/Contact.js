@@ -53,8 +53,11 @@ export const Contact = () => {
               />
             </div>
             <div className="flex flex-col gap-4 mb-4">
-              <input className="border rounded-md" placeholder="  Subject" />
               <input
+                className="border lg:w-[225px] rounded-md"
+                placeholder="  Subject"
+              />
+              <textarea
                 className="border rounded-md pb-[130px]"
                 placeholder="  Write a message"
               />

@@ -3,7 +3,6 @@ import { Fb } from "./icons/Fboook";
 import { Twitter } from "./icons/twitter";
 import { In } from "./icons/In";
 import { Blogo } from "./icons/BlogLogo";
-// import {}
 
 const abouts = [
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
@@ -60,7 +59,7 @@ export const Footer = () => {
           <In />
         </div>
       </div>
-      <div className="flex justify-between py-8 mt-5 border-t-2">
+      <div className="sm:flex justify-between py-8 mt-5 border-t-2">
         <div className="flex gap-2">
           <Blogo></Blogo>
           <div className="">
@@ -73,7 +72,7 @@ export const Footer = () => {
             </p>
           </div>
         </div>
-        <div className="flex gap-4 font-extralight text-base text-gray-700">
+        <div className="sm:flex gap-4 font-extralight text-base text-gray-700">
           {link.map((element, index) => {
             return <Link key={index} text={element}></Link>;
           })}

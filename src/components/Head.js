@@ -25,21 +25,12 @@ export const Heads = (props) => {
             <Link href={`/`}>Home</Link>
             <Link href={`/blog`}>Blog</Link>
             <Link href="/Contact">Contact</Link>
-            {/* {Header.map((element, index) => {
-            return (
-              <div
-                className="font-extralight text-base text-gray-700"
-                key={index}
-              >
-                {element}
-              </div>
-            );
-          })} */}
           </div>
           <div className="flex items-center  bg-gray-100 rounded">
             <input
-              className=" bg-gray-100 rounded-md h-9 font-extralight text-base"
-              placeholder="   search"
+              className=" bg-gray-100 rounded-md h-9 font-extralight text-base transition ease-in-out delay-[0.3s] hover:-translate-y-1 hover:scale-110 hover: duration-[0.3s] hover:transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+"
+              placeholder="  search"
             ></input>
             <Search></Search>
           </div>

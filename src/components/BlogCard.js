@@ -10,14 +10,14 @@ export const BlogCard = (props) => {
         </div>
         <div className="flex flex-col  ">
           <div className="flex flex-col gap-3">
-            <div className="font-normal text-sm text-blue-600  px-[10px] py-[5px] rounded-lg bg-gray-100  ">
+            <div className="font-normal text-sm text-blue-600  px-[10px] py-[5px] rounded-lg bg-gray-100 w-fit ">
               {tags}
             </div>
-            <h1 className="text-xl font-semibold">{title}</h1>{" "}
+            <h1 className="text-xl font-semibold text-start">{title}</h1>{" "}
           </div>
         </div>{" "}
-        <div className="font-normal text-gray-400">
-          {moment(date).format("ll")}
+        <div className="font-normal text-start text-gray-400">
+          {moment(date).format("MMMM DD, YYYY")}
         </div>
       </div>
     </Link>

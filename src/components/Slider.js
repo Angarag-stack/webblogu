@@ -24,7 +24,7 @@ const Screen = (props) => {
           }}
         />
         <div className="p-10 bg-white text-start w-[598px] flex flex-col gap-7 absolute bottom-2 left-2 rounded-md ">
-          <div className=" border bg-blue-700 text-white py-1 px-[10px] font-normal text-sm  rounded-lg w-[97px]">
+          <div className=" border bg-blue-700 text-white py-1 px-[10px] font-normal text-sm  rounded-lg w-fit">
             {tags}
           </div>
           <div className="text-2xl font-medium ">{text}</div>
@@ -40,7 +40,7 @@ const Screen = (props) => {
 
 export const Slide = () => {
   const { data: blogs, error, isLoading } = useSWR(url, fetcher);
-  const [slide, setSlide] = useState(0);
+  const [slide, setSlide] = useState(1);
 
   if (error) {
     return <p>...oh error</p>;
