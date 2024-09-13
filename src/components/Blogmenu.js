@@ -4,15 +4,17 @@ import { ThemeContext } from "./ThemeContext";
 
 export const Menu = (props) => {
   const { blogs, tags } = useContext(ThemeContext);
+  const [tagview, setTagview] = useState("View all");
+
   const { setSelectedTag } = props;
   const [name, setName] = useState(5);
 
   const Showname = () => {
-    setName(tags.length);
+    setTagview(tagview === "View all" ? "Show less" : "View all");
+    setName(tagview === "View all" ? tags.length : 5);
   };
   const selectTag = (tag) => {
     setSelectedTag(tag);
-    console.log(tag);
   };
 
   return (
@@ -33,7 +35,7 @@ export const Menu = (props) => {
           })}
         </div>
         <div className=" text-gray-900 font-semibold" onClick={Showname}>
-          View all
+          {tagview}
         </div>
       </div>
     </div>

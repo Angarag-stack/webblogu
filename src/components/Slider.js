@@ -50,7 +50,7 @@ export const Slide = () => {
     return <p>...loading</p>;
   }
   const Nextslide = () => {
-    setSlide((prev) => prev + 1);
+    if (slide < blogs.length - 1) setSlide((prev) => prev + 1);
   };
   const Prevslide = () => {
     if (slide > 0) setSlide((prev) => prev - 1);

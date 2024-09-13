@@ -11,7 +11,6 @@ export const More = () => {
   // const { blogs, tags } = useContext(ThemeContext);
   const url = `https://dev.to/api/articles?tag=${selectedTag}`;
   const { data: blogs, error, isLoading } = useSWR(url, fetcher);
-
   const [load, setLoad] = useState(9);
   const [name, setName] = useState(5);
 
@@ -41,7 +40,6 @@ export const More = () => {
               cover_image={blog.cover_image}
               date={blog.created_at}
               auther={blog.user.name}
-              tag={blog.tags}
             />
           );
         })}
