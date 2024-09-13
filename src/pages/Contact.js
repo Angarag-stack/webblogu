@@ -62,11 +62,24 @@ export const Contact = () => {
                 placeholder="  Write a message"
               />
             </div>
+
             <button class="btn btn-primary px-8 ">Send message</button>
           </div>
         </div>
+        {/* <Page></Page> */}
       </div>{" "}
     </div>
   );
 };
 export default Contact;
+import Link from "next/link";
+import { useRouter } from "next/router";
+// const Page = () => {
+//   const router = useRouter();
+
+//   return (
+//     <button type="button" onClick={() => router.push("/blog")}>
+//       Click me
+//     </button>
+//   );
+// };

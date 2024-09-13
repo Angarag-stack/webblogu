@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Custom404() {
   return (
     <div className="flex justify-evenly px-10 xl:max-w-[1024px] xl:m-auto  gap-[20px] lg:gap-[100px] pb-20">
@@ -9,7 +11,9 @@ export default function Custom404() {
           We are sorry, This page is unknown or does not exist the page you are
           looking for.
         </div>
-        <button className="btn btn-primary w-fit px-10">Back to Home</button>
+        <Link href="/">
+          <button className="btn btn-primary w-fit px-10">Back to Home</button>
+        </Link>
       </div>
     </div>
   );

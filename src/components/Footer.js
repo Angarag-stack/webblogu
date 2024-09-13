@@ -32,7 +32,7 @@ const Link = (props) => {
 };
 export const Footer = () => {
   return (
-    <div className="bg-gray-100 p-10 lg:py-[64px] lg:px-[352px] ">
+    <div className="bg-gray-100  xl:w-[1216px] lg:py-[64px] lg:mx-auto">
       <div className=" text-center lg:flex justify-between">
         <div className="lg:text-start">
           <p className="text-lg font-medium ">About</p>

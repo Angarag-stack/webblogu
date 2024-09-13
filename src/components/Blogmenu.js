@@ -21,7 +21,7 @@ export const Menu = (props) => {
       <div className="flex justify-between">
         <div className="flex flex-wrap gap-3 lg:gap-5 text-gray-600 font-semibold">
           <div className="text-yellow-600 ">All</div>
-          {tags.map((tag, index) => {
+          {tags?.map((tag, index) => {
             if (index < name)
               return (
                 <Tags

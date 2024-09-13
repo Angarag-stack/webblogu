@@ -10,7 +10,7 @@ const Header = ["Home", "Blog", "Contact"];
 export const Heads = (props) => {
   const { id } = props;
   return (
-    <div className=" text-center px-10 xl:max-w-[1024px] xl:m-auto   ">
+    <div className=" text-center xl:max-w-[1216px] xl:m-auto   ">
       <div className="flex flex-row justify-between pt-[32px] pb-[20px] lg:pb-[100px]">
         <div className=" flex justify-between items-center gap-2">
           <Blogo></Blogo>

@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { Heads } from "./Head";
-import { Footer } from "./About";
+import { Footer } from "./Footer";
 
 export const Layout = (props) => {
   const { children } = props;
@@ -8,7 +8,9 @@ export const Layout = (props) => {
     <div>
       <Heads />
       {children}
-      <Footer />
+      <div className="bg-gray-100 p-10">
+        <Footer />
+      </div>
     </div>
   );
 };
