@@ -18,8 +18,8 @@ export const TrendingBlogCards = (props) => {
         {/* <figure>
         <img className="w-[290px] h-[320px] rounded-sm" src={img} />
       </figure> */}
-        <div className="text-start flex flex-col absolute bottom-5 left-5 gap-4 rounded-md ">
-          <div className="  bg-blue-700 text-white py-1 px-[10px] z-10  rounded-lg  w-fit absolute  bottom-20">
+        <div className="text-start flex flex-col absolute top-40 left-5 gap-4 rounded-md ">
+          <div className="  bg-blue-700 text-white py-1 px-[10px] z-10  rounded-lg  w-fit ">
             {tag}
           </div>
           <div className="text-white z-10">{text}</div>

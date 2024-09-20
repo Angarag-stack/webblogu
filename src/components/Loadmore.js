@@ -27,6 +27,7 @@ export const More = () => {
   const loadmore = () => {
     setLoad((p) => p + 9);
   };
+
   return (
     <div>
       <Menu setSelectedTag={setSelectedTag} />
@@ -40,6 +41,7 @@ export const More = () => {
               cover_image={blog.cover_image}
               date={blog.created_at}
               auther={blog.user.name}
+              tags={blog.tag_list}
             />
           );
         })}

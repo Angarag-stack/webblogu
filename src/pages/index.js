@@ -32,7 +32,7 @@ const Home = (props) => {
                     key={blog.id}
                     img={blog.cover_image}
                     text={blog.title}
-                    tag={blog.tags}
+                    tag={blog.tag_list[0]}
                   />
                 </div>
               );
