@@ -15,7 +15,7 @@ const Home = (props) => {
   const trendingBlogs = blogs?.slice(0, 4);
 
   return (
-    <div className="flex flex-col gap-[100px] ">
+    <div className="flex flex-col gap-[100px] bg-white ">
       <div className="text-center px-10 xl:max-w-[1216px] xl:m-auto flex flex-col gap-[20px] lg:gap-[100px]  ">
         <div className="">
           <Slide></Slide>
