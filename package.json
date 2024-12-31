@@ -18,12 +18,12 @@
     "react-dom": "^18",
     "react-markdown": "^9.0.1",
     "routes": "^2.1.0",
-    "swr": "^2.2.5"
+    "swr": "^2.3.0"
   },
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.15",
     "daisyui": "^4.12.10",
-    "eslint": "^8",
+    "eslint": "^8.57.1",
     "eslint-config-next": "14.2.7",
     "postcss": "^8",
     "tailwindcss": "^3.4.1"
